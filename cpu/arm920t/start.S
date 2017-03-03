@@ -114,8 +114,8 @@ start_code:
 	orr	r0, r0, #0xd3
 	msr	cpsr, r0
 
-	bl	coloured_LED_init
-	bl	red_LED_on
+@	bl	coloured_LED_init
+@	bl	red_LED_on
 
 #if	defined(CONFIG_AT91RM9200DK) || defined(CONFIG_AT91RM9200EK)
 	/*
@@ -156,7 +156,7 @@ copyex:
 	ldr	r0, =INTMSK
 	str	r1, [r0]
 # if defined(CONFIG_S3C2410)
-	ldr	r1, =0x3ff
+	ldr	r1, =0x7ff
 	ldr	r0, =INTSUBMSK
 	str	r1, [r0]
 # endif

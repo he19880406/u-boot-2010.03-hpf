@@ -33,6 +33,7 @@
 
 #include <asm/arch/s3c24x0_cpu.h>
 #include <asm/proc-armv/ptrace.h>
+#include <asm/io.h>
 
 void do_irq (struct pt_regs *pt_regs)
 {
